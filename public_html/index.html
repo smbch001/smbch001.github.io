@@ -84,7 +84,7 @@
                         </div>
 
                         <div class="text-center text-light w-full">
-                            <input id="check_new" type="checkbox" name="entry.1795305202" value="第一次來教會" />
+                            <input id="check_new" type="checkbox" name="entry.1795305202" value="是" />
                             <label for="check_new">第一次來教會</label>
                         </div>
 
@@ -130,17 +130,19 @@
                         0: function (data) {
                             //0 is when Google gives a CORS error, don't worry it went through
                             //success
-                            $("#form-success").text("0:hooray!");
+                            //$("#form-success").text("0:hooray!");
+                            window.location.href = "success.html";
                         },
                         200: function (data) {
                             //200 is a success code. it went through!
                             //success
-                            $("#form-success").text("200:hooray!");
+                            //$("#form-success").text("200:hooray!");
+                            window.location.href = "success.html";
                         },
                         403: function (data) {
                             //403 is when something went wrong and the submission didn't go through
                             //error
-                            alert("Oh no! something went wrong. we should check our code to make sure everything matches with Google");
+                            alert("403:發生錯誤，請聯絡開發人員");
                         },
                     },
                 });
